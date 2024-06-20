@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+tortoise-orm
+aerich
+python-dotenv
+passlib[bcrypt]
+python-jose
