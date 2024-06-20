@@ -3,7 +3,10 @@ from app.schemas.task import TaskCreate
 
 async def create_task(task: TaskCreate, user_id: int):
     task_obj = await Task.create(
-        **task.dict(),
+        title=task.title,
+        description=task.description,
+        completed=False,
+        due_date=None,
         owner_id=user_id
     )
     return task_obj
