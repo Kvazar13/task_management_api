@@ -1,4 +1,6 @@
 from pydantic import BaseModel
+from typing import Optional
+from datetime import datetime
 
 class TaskCreate(BaseModel):
     title: str
@@ -9,7 +11,8 @@ class Task(BaseModel):
     title: str
     description: str
     completed: bool
+    due_date: Optional[datetime]
     owner_id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
