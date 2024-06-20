@@ -11,6 +11,3 @@ async def create_user(user: UserCreate):
         hashed_password=hashed_password
     )
     return user_obj
-
-async def get_user(user_id: int):
-    return await User.filter(id=user_id).first()
