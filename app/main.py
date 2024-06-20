@@ -12,7 +12,7 @@ app = FastAPI()
 register_tortoise(
     app,
     config=TORTOISE_ORM,
-    generate_schemas=True,
+    generate_schemas=False,  # Disable auto-generation, rely on Aerich
     add_exception_handlers=True,
 )
 
