@@ -110,6 +110,16 @@ Welcome to the Task Management API, a FastAPI-based application designed to mana
       - `Authorization`: Bearer <access_token>
 
 
+5. **Update a task (mark as completed):**
+    - Endpoint: `PUT /tasks/{task_id}`
+    - Request Header:
+      - `Authorization`: Bearer <access_token>
+    - Request Body:
+      ```json
+      {
+        "completed": true
+      }
+      ```
 
 
 ### Contributing
